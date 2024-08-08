@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "restaurant",
     "crispy_forms",
     "crispy_bootstrap5",
+    "bootstrap5",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -82,9 +83,20 @@ WSGI_APPLICATION = "hotel_project.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
+    'default': {
+        'ENGINE': 'sqlserver_ado',
+        'NAME': 'ernicom',
+        'HOST': '.\SQLEXPRESS',
+        'USER': 'sa',
+        'PASSWORD': 'BEHBEH!1a2b@#',
+        'OPTIONS' : {
+            'provider': 'SQLOLEDB',
+            'use_mars': True,
+        },
     }
 }
 

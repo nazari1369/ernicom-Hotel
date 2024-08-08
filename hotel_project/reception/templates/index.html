@@ -1,9 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
 <!DOCTYPE html>
 <html>
+    <head>
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+    </head>
 <body>
 
-<h1>Hello World!</h1>
-<p>Welcome to my first Django project!</p>
+
+
+    <button type="button" class="btn btn-primary">Primary</button>
+
+
+
 
 </body>
 </html>
